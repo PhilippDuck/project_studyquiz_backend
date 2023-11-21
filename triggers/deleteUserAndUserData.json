@@ -1,0 +1,19 @@
+{
+    "id": "654be8f88e21ce521ea8555a",
+    "name": "deleteUserAndUserData",
+    "type": "AUTHENTICATION",
+    "config": {
+        "operation_type": "DELETE",
+        "providers": [
+            "local-userpass"
+        ]
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "deleteUserData"
+            }
+        }
+    }
+}

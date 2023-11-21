@@ -1,0 +1,26 @@
+{
+    "anon-user": {
+        "name": "anon-user",
+        "type": "anon-user",
+        "disabled": false
+    },
+    "api-key": {
+        "name": "api-key",
+        "type": "api-key",
+        "disabled": true
+    },
+    "local-userpass": {
+        "name": "local-userpass",
+        "type": "local-userpass",
+        "config": {
+            "autoConfirm": false,
+            "confirmEmailSubject": "Bestätige Deine Email Adresse.",
+            "emailConfirmationUrl": "https://project-studyquiz.netlify.app/confirmregistration",
+            "resetPasswordSubject": "Hier ist ein Link um Dein Passwort zurückzusetzen.",
+            "resetPasswordUrl": "https://project-studyquiz.netlify.app/resetpassword",
+            "runConfirmationFunction": false,
+            "runResetFunction": false
+        },
+        "disabled": false
+    }
+}

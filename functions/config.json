@@ -1,0 +1,82 @@
+[
+    {
+        "name": "createQuiz",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getQuizzes",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getUsersData",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "setNickname",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "onUserCreation",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "deleteQuizById",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getQuizById",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "setPlayedQuiz",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getTopics",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "reportQuestion",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getReportedQuestions",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "releaseReportedQuestionById",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "deleteReportedQuestionsById",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "deleteUserData",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getPlayedQuizzesByTopic",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "deleteAllPlayedQuizzes",
+        "private": false,
+        "disable_arg_logs": true
+    }
+]
