@@ -1,5 +1,5 @@
 /**
- * Erwartet ein Quiz Objekt. Ergänzt die Fragen um UUIDs und speichert das Quiz in der "quizzes" Collection. 
+ * Erwartet ein Quiz Objekt. Ergänzt die Fragen um UUIDs und speichert das Quiz in der "quizzes" collection. 
  */
 
 const { v4: uuidv4 } = require('uuid');
