@@ -8,14 +8,15 @@ exports = async function (payload) {
   const playedQuizzesCollection = mongo.db("project-studyquiz").collection("playedQuizzes");
   const userDataCollection = mongo.db("project-studyquiz").collection("custom_userData");
 
-  // Extrahieren des Topics aus dem Payload, falls vorhanden
   let topicFilter = {};
   if (payload && payload.topic) {
     topicFilter = { quizTopic: payload.topic };
   }
 
-  // Abfrage der playedQuizzes basierend auf dem Thema (falls angegeben)
-  const playedQuizzes = await playedQuizzesCollection.find({ ...topicFilter }).toArray();
+  // Hinzufügen einer Sortieroption, um nach dem neuesten Datum zu sortieren, wenn kein Thema angegeben ist
+  const sortOption = payload && payload.topic ? {} : { createdAt: -1 }; 
+
+  const playedQuizzes = await playedQuizzesCollection.find({ ...topicFilter }).sort(sortOption).toArray();
 
   for (let i = 0; i < playedQuizzes.length; i++) {
     const playerData = await userDataCollection.findOne({ userId: playedQuizzes[i].playerId });
@@ -30,10 +31,8 @@ exports = async function (payload) {
   // Sortieren der Quizzes zuerst nach Punkten und dann nach Zeit
   playedQuizzes.sort((a, b) => {
     if (a.points !== b.points) {
-      // Sortieren nach Punkten in absteigender Reihenfolge
       return b.points - a.points;
     } else {
-      // Bei gleicher Punktzahl, sortieren nach kürzester Zeit
       return (a.endTime - a.startTime) - (b.endTime - b.startTime);
     }
   });
